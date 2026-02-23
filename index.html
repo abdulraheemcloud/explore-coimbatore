@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Coimbatore Travel Guide</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body{
+            margin:0;
+            font-family: Arial, sans-serif;
+            background:#f4f7fb;
+        }
+
+        nav{
+            background:#0d3b66;
+            padding:15px;
+            text-align:center;
+        }
+
+        nav a{
+            color:white;
+            margin:15px;
+            text-decoration:none;
+            font-weight:bold;
+        }
+
+        nav a:hover{
+            color:#74c69d;
+        }
+
+        header{
+            background:linear-gradient(135deg,#0d3b66,#3a86ff);
+            color:white;
+            text-align:center;
+            padding:60px 20px;
+        }
+
+        .container{
+            padding:30px;
+            max-width:1000px;
+            margin:auto;
+        }
+
+        h2{
+            border-left:5px solid #0d3b66;
+            padding-left:10px;
+            margin-top:40px;
+        }
+
+        .search{
+            width:100%;
+            padding:10px;
+            margin:20px 0;
+        }
+
+        .grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+            gap:20px;
+        }
+
+        .card{
+            background:white;
+            padding:15px;
+            border-radius:8px;
+            box-shadow:0 3px 8px rgba(0,0,0,0.1);
+        }
+
+        footer{
+            background:#0d3b66;
+            color:white;
+            text-align:center;
+            padding:20px;
+            margin-top:40px;
+        }
+    </style>
+</head>
+
+<body>
+
+<nav>
+    <a href="#food">Food</a>
+    <a href="#tourist">Tourist</a>
+    <a href="#shopping">Shopping</a>
+</nav>
+
+<header>
+    <h1>🌍 Coimbatore Travel Guide</h1>
+    <p>Budget Food | Tourist Spots | Shopping Places</p>
+</header>
+
+<div class="container">
+
+    <input type="text" id="search" class="search" placeholder="Search places..." onkeyup="searchPlaces()">
+
+    <h2 id="food">Food</h2>
+    <div class="grid">
+        <div class="card">Annapoorna – Budget Veg Restaurant</div>
+        <div class="card">Hari Bhavanam – Non Veg Restaurant</div>
+        <div class="card">Sree Anandhaas – Sweets & Meals</div>
+    </div>
+
+    <h2 id="tourist">Tourist Spots</h2>
+    <div class="grid">
+        <div class="card">Isha Yoga Center – Adiyogi Statue</div>
+        <div class="card">Marudamalai Temple</div>
+        <div class="card">Siruvani Waterfalls</div>
+    </div>
+
+    <h2 id="shopping">Shopping</h2>
+    <div class="grid">
+        <div class="card">Brookefields Mall</div>
+        <div class="card">Prozone Mall</div>
+        <div class="card">RS Puram Market</div>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 Coimbatore Travel Guide | Abdul Raheem
+</footer>
+
+<script>
+function searchPlaces(){
+    let input = document.getElementById("search").value.toLowerCase();
+    let cards = document.querySelectorAll(".card");
+
+    cards.forEach(card=>{
+        if(card.innerText.toLowerCase().includes(input)){
+            card.style.display="";
+        }else{
+            card.style.display="none";
+        }
+    });
+}
+</script>
+
+</body>
+</html>
