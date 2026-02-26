@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Coimbatore Explore - Discover the Manchester of South India. Temples, nature, adventure, and Kongu cuisine.">
-    <meta name="keywords" content="Coimbatore, tourism, Tamil Nadu, temples, waterfalls, Kongu cuisine, Adiyogi, Siruvani">
+    <meta name="description" content="Discover Coimbatore and nearby weekend trips like Ooty, Valparai, and Pollachi. Budget travel guides and hotel recommendations.">
+    <meta name="keywords" content="Coimbatore travel, Ooty trip from Coimbatore, Valparai trip, Weekend trips Tamil Nadu">
     <meta name="author" content="Coimbatore Explore">
-    <title>Coimbatore Explore | Manchester of South India</title>
+    <title>Coimbatore Explore | Weekend Trips & Travel Guide</title>
     
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/animations.css">
@@ -15,143 +15,114 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="header" id="header">
-        <nav class="navbar container">
-            <a href="index.html" class="nav-logo">
-                <span class="logo-icon">🏔️</span>
-                <span class="logo-text">Coimbatore<span class="logo-highlight">Explore</span></span>
+
+<header class="header" id="header">
+    <nav class="navbar container">
+        <a href="index.html" class="nav-logo">
+            <span class="logo-icon">🏔️</span>
+            <span class="logo-text">Coimbatore<span class="logo-highlight">Explore</span></span>
+        </a>
+
+        <button class="nav-toggle" id="navToggle">
+            <span class="hamburger"></span>
+        </button>
+
+        <ul class="nav-menu" id="navMenu">
+            <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
+            <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="explore.html" class="nav-link">Explore</a></li>
+            <li class="nav-item"><a href="food.html" class="nav-link">Food</a></li>
+            <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+
+            <!-- BLOG LINK ADDED -->
+            <li class="nav-item">
+                <a href="blog/ooty-trip-from-coimbatore.html" class="nav-link">
+                    Blog
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <button class="theme-toggle" id="themeToggle">🌙</button>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<!-- HERO SECTION -->
+<section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content container">
+        <h1 class="hero-title">
+            Discover <span class="gradient-text">Coimbatore & Weekend Trips</span>
+        </h1>
+        <p class="hero-tagline">Budget Travel Guides from Coimbatore</p>
+        <p class="hero-description">
+            Plan smart weekend trips to Ooty, Valparai, Pollachi and more with budget breakdown, hotel suggestions and travel tips.
+        </p>
+        <div class="hero-cta">
+            <a href="blog/ooty-trip-from-coimbatore.html" class="btn btn-primary">
+                View Travel Guide
             </a>
-            <button class="nav-toggle" id="navToggle"><span class="hamburger"></span></button>
-            <ul class="nav-menu" id="navMenu">
-                <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
-                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-                <li class="nav-item"><a href="explore.html" class="nav-link">Explore</a></li>
-                <li class="nav-item"><a href="food.html" class="nav-link">Food</a></li>
-                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-                <li class="nav-item"><button class="theme-toggle" id="themeToggle">🌙</button></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section class="hero">
-        <div class="hero-video-container">
-            <div class="hero-overlay"></div>
         </div>
-        <div class="hero-content container">
-            <h1 class="hero-title">Discover <span class="gradient-text">Coimbatore</span></h1>
-            <p class="hero-tagline">Where Tradition Meets Innovation</p>
-            <p class="hero-description">Experience the Manchester of South India — ancient temples, pristine waterfalls, misty mountains, and flavors that tell stories of the Kongu Nadu heritage.</p>
-            <div class="hero-cta">
-                <a href="explore.html" class="btn btn-primary">Start Exploring</a>
-                <a href="food.html" class="btn btn-secondary">Taste Kongu</a>
+    </div>
+</section>
+
+<!-- LATEST BLOG SECTION -->
+<section class="section-padding">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-subtitle">Latest Articles</span>
+            <h2 class="section-title">Travel Guides from Coimbatore</h2>
+        </div>
+
+        <div style="max-width:800px;margin:auto;">
+            <h3>
+                <a href="blog/ooty-trip-from-coimbatore.html">
+                    Ooty Trip from Coimbatore – Complete Budget Guide
+                </a>
+            </h3>
+            <p>
+                Full 2-day itinerary, travel options, hotel suggestions and estimated budget breakdown.
+            </p>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="footer-logo">
+                    🏔️ Coimbatore<span class="logo-highlight">Explore</span>
+                </a>
+                <p>Your weekend trip planning guide from Coimbatore.</p>
             </div>
-        </div>
-    </section>
 
-    <section class="stats section-padding">
-        <div class="container">
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <div class="stat-icon">🏛️</div>
-                    <div class="stat-number" data-target="50">0</div>
-                    <div class="stat-label">Heritage Sites</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-icon">🌿</div>
-                    <div class="stat-number" data-target="25">0</div>
-                    <div class="stat-label">Nature Spots</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-icon">🍽️</div>
-                    <div class="stat-number" data-target="100">0</div>
-                    <div class="stat-label">Food Destinations</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-icon">😊</div>
-                    <div class="stat-number" data-target="1000000">0</div>
-                    <div class="stat-label">Happy Visitors</div>
-                </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="blog/ooty-trip-from-coimbatore.html">Travel Guides</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h4>Location</h4>
+                <p>📍 Coimbatore, Tamil Nadu</p>
             </div>
         </div>
-    </section>
 
-    <section class="featured section-padding bg-alt">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-subtitle">Curated Experiences</span>
-                <h2 class="section-title">Featured Destinations</h2>
-            </div>
-            <div class="featured-grid">
-                <article class="featured-card">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1561361058-c24cecae35ca?w=800&q=80" alt="Isha Adiyogi">
-                        <div class="card-overlay"><span class="card-tag">Spiritual</span></div>
-                    </div>
-                    <div class="card-content">
-                        <h3>Isha Adiyogi</h3>
-                        <p>The 112-foot face of the first yogi, a magnificent spiritual destination.</p>
-                        <a href="explore.html" class="card-link">Explore →</a>
-                    </div>
-                </article>
-                <article class="featured-card">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1545562083-c583d060a12e?w=800&q=80" alt="Siruvani Waterfalls">
-                        <div class="card-overlay"><span class="card-tag">Nature</span></div>
-                    </div>
-                    <div class="card-content">
-                        <h3>Siruvani Waterfalls</h3>
-                        <p>Crystal clear waters cascading through dense Western Ghats forests.</p>
-                        <a href="explore.html" class="card-link">Explore →</a>
-                    </div>
-                </article>
-                <article class="featured-card">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1514222134-b57cbb8ce073?w=800&q=80" alt="Marudamalai Temple">
-                        <div class="card-overlay"><span class="card-tag">Heritage</span></div>
-                    </div>
-                    <div class="card-content">
-                        <h3>Marudamalai Temple</h3>
-                        <p>Ancient hilltop temple dedicated to Lord Murugan.</p>
-                        <a href="explore.html" class="card-link">Explore →</a>
-                    </div>
-                </article>
-            </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Coimbatore Explore. All rights reserved.</p>
         </div>
-    </section>
+    </div>
+</footer>
 
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <a href="index.html" class="footer-logo">🏔️ Coimbatore<span class="logo-highlight">Explore</span></a>
-                    <p>Your gateway to discovering the Manchester of South India.</p>
-                </div>
-                <div class="footer-links">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="explore.html">Explore</a></li>
-                        <li><a href="food.html">Food</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-contact">
-                    <h4>Contact</h4>
-                    <p>📍 Coimbatore, Tamil Nadu</p>
-                    <p>📧 hello@coimbatoreexplore.com</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Coimbatore Explore. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+<button class="scroll-top" id="scrollTop">↑</button>
 
-    <button class="scroll-top" id="scrollTop">↑</button>
+<script src="js/theme.js"></script>
+<script src="js/main.js"></script>
 
-    <script src="js/theme.js"></script>
-    <script src="js/main.js"></script>
 </body>
-
 </html>
