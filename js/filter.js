@@ -70,4 +70,5 @@
     } else {
         initFilter();
     }
+
 })();
