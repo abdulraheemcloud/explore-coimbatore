@@ -1,0 +1,194 @@
+/* ============================================================
+   COIMBATORE EXPLORE — Animations Stylesheet
+   ============================================================ */
+
+/* ── Page load fade-in ────────────────────────────────────── */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slideRight {
+  from { opacity: 0; transform: translateX(-32px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+/* ── Hero entrance animations ─────────────────────────────── */
+.hero-eyebrow  { animation: slideDown 0.6s ease 0.1s both; }
+.hero-title    { animation: slideUp  0.8s ease 0.25s both; }
+.hero-subtitle { animation: slideUp  0.8s ease 0.4s  both; }
+.hero-cta      { animation: slideUp  0.8s ease 0.55s both; }
+.hero-scroll-hint { animation: fadeIn 1s ease 1.2s both; }
+
+/* ── Card hover lift ──────────────────────────────────────── */
+@keyframes cardPulse {
+  0%   { box-shadow: var(--shadow-sm); }
+  50%  { box-shadow: 0 12px 40px rgba(196,98,45,0.2); }
+  100% { box-shadow: var(--shadow-sm); }
+}
+
+/* ── Shimmer loading skeleton ─────────────────────────────── */
+@keyframes shimmer {
+  0%   { background-position: -600px 0; }
+  100% { background-position: 600px 0; }
+}
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--color-surface2) 25%,
+    var(--color-border) 50%,
+    var(--color-surface2) 75%
+  );
+  background-size: 600px 100%;
+  animation: shimmer 1.4s ease infinite;
+  border-radius: var(--radius-sm);
+}
+
+/* ── Counter number pop ───────────────────────────────────── */
+@keyframes numPop {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+.stat-number.popped { animation: numPop 0.3s ease; }
+
+/* ── Filter transition ────────────────────────────────────── */
+.explore-card {
+  transition:
+    opacity  0.35s ease,
+    transform 0.35s ease,
+    box-shadow var(--transition);
+}
+.explore-card.hiding {
+  opacity: 0;
+  transform: scale(0.95);
+  pointer-events: none;
+}
+.explore-card.showing {
+  animation: scaleIn 0.4s ease both;
+}
+
+/* ── Nav underline hover ──────────────────────────────────── */
+.nav-links a::after {
+  content: '';
+  display: block;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--color-accent);
+  transform: scaleX(0);
+  transition: transform 0.25s ease;
+  transform-origin: left center;
+  margin-top: 2px;
+}
+.nav-links a:hover::after,
+.nav-links a.active::after { transform: scaleX(1); }
+
+/* ── Floating badge on dest cards ─────────────────────────── */
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50%      { transform: translateY(-6px); }
+}
+.dest-card-category { animation: float 3s ease-in-out infinite; }
+
+/* ── Button ripple ────────────────────────────────────────── */
+.btn {
+  position: relative;
+  overflow: hidden;
+}
+.btn::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,0.15);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s ease;
+}
+.btn:hover::after { transform: scaleX(1); transform-origin: left; }
+
+/* ── Spinner (form submit) ────────────────────────────────── */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+.spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(255,255,255,0.4);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  display: none;
+}
+.loading .spinner { display: block; }
+.loading .btn-text { display: none; }
+
+/* ── Scroll progress bar ──────────────────────────────────── */
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+  z-index: 1100;
+  width: 0%;
+  transition: width 0.1s linear;
+}
+
+/* ── Lightbox scale-in ────────────────────────────────────── */
+.lightbox-inner {
+  animation: scaleIn 0.3s ease;
+}
+
+/* ── Parallax hint on hero bg ─────────────────────────────── */
+@keyframes subtleZoom {
+  0%   { transform: scale(1); }
+  100% { transform: scale(1.04); }
+}
+.hero-video-bg video,
+.hero-bg-fallback {
+  animation: subtleZoom 12s ease-in-out infinite alternate;
+}
+
+/* ── Staggered card entrance ──────────────────────────────── */
+.dest-card:nth-child(1) { transition-delay: 0.05s; }
+.dest-card:nth-child(2) { transition-delay: 0.10s; }
+.dest-card:nth-child(3) { transition-delay: 0.15s; }
+.dest-card:nth-child(4) { transition-delay: 0.20s; }
+.dest-card:nth-child(5) { transition-delay: 0.25s; }
+.dest-card:nth-child(6) { transition-delay: 0.30s; }
+
+.explore-card:nth-child(1) { transition-delay: 0.05s; }
+.explore-card:nth-child(2) { transition-delay: 0.10s; }
+.explore-card:nth-child(3) { transition-delay: 0.15s; }
+.explore-card:nth-child(4) { transition-delay: 0.20s; }
+.explore-card:nth-child(5) { transition-delay: 0.25s; }
+
+/* ── Theme switch flash ───────────────────────────────────── */
+.theme-flash {
+  position: fixed;
+  inset: 0;
+  background: var(--color-bg);
+  z-index: 9998;
+  opacity: 0;
+  pointer-events: none;
+  animation: themeFlash 0.25s ease;
+}
+@keyframes themeFlash {
+  0%   { opacity: 0.4; }
+  100% { opacity: 0; }
+}
