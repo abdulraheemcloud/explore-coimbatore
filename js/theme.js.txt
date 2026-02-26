@@ -1,0 +1,51 @@
+(function() {
+    'use strict';
+    
+    const THEME_KEY = 'coimbatore-theme';
+    
+    function initTheme() {
+        const savedTheme = localStorage.getItem(THEME_KEY);
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        
+        if (savedTheme) {
+            setTheme(savedTheme);
+        } else if (prefersDark) {
+            setTheme('dark');
+        } else {
+            setTheme('light');
+        }
+    }
+    
+    function setTheme(theme) {
+        document.documentElement.setAttribute('data-theme', theme);
+        updateIcon(theme);
+    }
+    
+    function toggleTheme() {
+        const current = document.documentElement.getAttribute('data-theme');
+        const newTheme = current === 'dark' ? 'light' : 'dark';
+        setTheme(newTheme);
+        localStorage.setItem(THEME_KEY, newTheme);
+    }
+    
+    function updateIcon(theme) {
+        const btn = document.getElementById('themeToggle');
+        if (btn) {
+            btn.textContent = theme === 'dark' ? '☀️' : '🌙';
+        }
+    }
+    
+    function init() {
+        initTheme();
+        const btn = document.getElementById('themeToggle');
+        if (btn) {
+            btn.addEventListener('click', toggleTheme);
+        }
+    }
+    
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+    } else {
+        init();
+    }
+})();

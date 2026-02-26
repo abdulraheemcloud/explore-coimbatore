@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Coimbatore | Temples, Nature & Adventure</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header" id="header">
+        <nav class="navbar container">
+            <a href="index.html" class="nav-logo">🏔️ Coimbatore<span class="logo-highlight">Explore</span></a>
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="explore.html" class="nav-link active">Explore</a></li>
+                <li class="nav-item"><a href="food.html" class="nav-link">Food</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                <li class="nav-item"><button class="theme-toggle" id="themeToggle">🌙</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="page-hero explore-hero">
+        <div class="page-hero-bg"></div>
+        <div class="container">
+            <div class="page-hero-content">
+                <h1>Explore Coimbatore</h1>
+            </div>
+        </div>
+    </section>
+
+    <section class="filter-section">
+        <div class="container">
+            <div class="filter-buttons" id="filterButtons">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="temple">Temples</button>
+                <button class="filter-btn" data-filter="nature">Nature</button>
+                <button class="filter-btn" data-filter="waterfalls">Waterfalls</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="destinations-section section-padding bg-alt">
+        <div class="container">
+            <div class="destinations-grid" id="destinationsGrid">
+                <article class="destination-card" data-category="temple">
+                    <div class="destination-image">
+                        <img src="https://images.unsplash.com/photo-1514222134-b57cbb8ce073?w=800&q=80" alt="Marudamalai">
+                        <span class="destination-tag">Temple</span>
+                    </div>
+                    <div class="destination-content">
+                        <h3>Marudamalai Temple</h3>
+                        <p>Ancient hilltop temple dedicated to Lord Murugan.</p>
+                        <div class="destination-meta"><span>⏰ 6AM-8PM</span><span>📍 12km</span></div>
+                    </div>
+                </article>
+                <article class="destination-card" data-category="temple">
+                    <div class="destination-image">
+                        <img src="https://images.unsplash.com/photo-1561361058-c24cecae35ca?w=800&q=80" alt="Isha Adiyogi">
+                        <span class="destination-tag">Temple</span>
+                    </div>
+                    <div class="destination-content">
+                        <h3>Isha Adiyogi</h3>
+                        <p>112-foot face of Adiyogi, source of Yoga.</p>
+                        <div class="destination-meta"><span>⏰ 6AM-8PM</span><span>📍 Isha Center</span></div>
+                    </div>
+                </article>
+                <article class="destination-card" data-category="waterfalls">
+                    <div class="destination-image">
+                        <img src="https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?w=800&q=80" alt="Siruvani">
+                        <span class="destination-tag">Waterfalls</span>
+                    </div>
+                    <div class="destination-content">
+                        <h3>Siruvani Waterfalls</h3>
+                        <p>Crystal clear waterfalls in Western Ghats.</p>
+                        <div class="destination-meta"><span>⏰ 10AM-5PM</span><span>📍 37km</span></div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2024 Coimbatore Explore. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/theme.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/filter.js"></script>
+</body>
+</html>

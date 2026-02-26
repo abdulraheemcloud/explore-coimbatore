@@ -1,0 +1,73 @@
+(function() {
+    'use strict';
+    
+    function initFilter() {
+        const buttons = document.querySelectorAll('.filter-btn');
+        const cards = document.querySelectorAll('.destination-card');
+        
+        if (!buttons.length || !cards.length) return;
+        
+        // Check URL params
+        const params = new URLSearchParams(window.location.search);
+        const category = params.get('category');
+        
+        if (category) {
+            const btn = document.querySelector(`[data-filter="${category}"]`);
+            if (btn) {
+                setActive(btn);
+                filter(category);
+            }
+        }
+        
+        // Click handlers
+        buttons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const filter = btn.getAttribute('data-filter');
+                setActive(btn);
+                filterDestinations(filter);
+                
+                // Update URL
+                if (filter === 'all') {
+                    history.pushState(null, '', 'explore.html');
+                } else {
+                    history.pushState(null, '', `explore.html?category=${filter}`);
+                }
+            });
+        });
+    }
+    
+    function setActive(activeBtn) {
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.classList.remove('active');
+        });
+        activeBtn.classList.add('active');
+    }
+    
+    function filterDestinations(category) {
+        const cards = document.querySelectorAll('.destination-card');
+        let count = 0;
+        
+        cards.forEach(card => {
+            const cardCategory = card.getAttribute('data-category');
+            const show = category === 'all' || cardCategory === category;
+            
+            if (show) {
+                card.classList.remove('hidden');
+                card.style.opacity = '0';
+                setTimeout(() => {
+                    card.style.opacity = '1';
+                }, count * 100);
+                count++;
+            } else {
+                card.style.opacity = '0';
+                setTimeout(() => card.classList.add('hidden'), 300);
+            }
+        });
+    }
+    
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initFilter);
+    } else {
+        initFilter();
+    }
+})();

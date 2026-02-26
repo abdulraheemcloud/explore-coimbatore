@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kongu Cuisine | Coimbatore Food Guide</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header" id="header">
+        <nav class="navbar container">
+            <a href="index.html" class="nav-logo">🏔️ Coimbatore<span class="logo-highlight">Explore</span></a>
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="explore.html" class="nav-link">Explore</a></li>
+                <li class="nav-item"><a href="food.html" class="nav-link active">Food</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                <li class="nav-item"><button class="theme-toggle" id="themeToggle">🌙</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="page-hero food-hero">
+        <div class="page-hero-bg"></div>
+        <div class="container">
+            <div class="page-hero-content">
+                <h1>Kongu Cuisine</h1>
+            </div>
+        </div>
+    </section>
+
+    <section class="dishes-section section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Signature Dishes</h2>
+            </div>
+            <div class="dishes-grid">
+                <div class="dish-card">
+                    <div class="dish-image"><img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=600&q=80" alt="Arisi Paruppu Sadam"></div>
+                    <div class="dish-content">
+                        <h3>Arisi Paruppu Sadam</h3>
+                        <p>Traditional rice and lentil dish with country vegetables.</p>
+                    </div>
+                </div>
+                <div class="dish-card">
+                    <div class="dish-image"><img src="https://images.unsplash.com/photo-1606491956689-2ea866880c84?w=600&q=80" alt="Kollu Rasam"></div>
+                    <div class="dish-content">
+                        <h3>Kollu Rasam</h3>
+                        <p>Hearty soup made with horse gram.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2024 Coimbatore Explore. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/theme.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
