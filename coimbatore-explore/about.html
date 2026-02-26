@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="About Coimbatore — Learn about the Manchester of South India, its history, culture, climate, and what makes it special." />
+  <title>About Coimbatore — Coimbatore Explore</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <script src="js/theme.js"></script>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <div id="scroll-progress" role="progressbar"></div>
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <span class="nav-logo-icon" aria-hidden="true">🌿</span>
+        Coimbatore<span style="color:var(--color-accent)">Explore</span>
+      </a>
+      <ul class="nav-links" id="nav-links" role="menubar">
+        <li role="none"><a href="index.html"   role="menuitem">Home</a></li>
+        <li role="none"><a href="explore.html" role="menuitem">Explore</a></li>
+        <li role="none"><a href="food.html"    role="menuitem">Food</a></li>
+        <li role="none"><a href="about.html"   role="menuitem">About</a></li>
+        <li role="none"><a href="contact.html" role="menuitem">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+          <span class="theme-toggle-knob" id="theme-knob" aria-hidden="true">☀️</span>
+        </button>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="about-hero page-hero" aria-label="About hero">
+      <div class="container">
+        <span class="section-tag" style="color:rgba(255,255,255,0.7);">The City</span>
+        <h1 style="font-size:clamp(2.4rem,5vw,4rem);font-weight:900;margin-bottom:12px;">
+          About Coimbatore
+        </h1>
+        <p style="color:rgba(255,255,255,0.8);font-size:1.05rem;max-width:520px;margin:0 auto;">
+          The Manchester of South India — an industrial powerhouse cloaked in
+          natural beauty and ancient spiritual heritage.
+        </p>
+      </div>
+    </section>
+
+    <!-- OVERVIEW -->
+    <section class="section" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="about-grid">
+
+          <div class="about-img-wrap reveal">
+            <!-- Placeholder image — replace with real city photo -->
+            <img src="assets/images/coimbatore-city.jpg"
+                 alt="Coimbatore city skyline with Nilgiris hills in the background"
+                 loading="lazy"
+                 style="height:460px;object-fit:cover;" />
+            <div class="about-img-badge">
+              <strong>2,000+</strong>
+              <span>Years of History</span>
+            </div>
+          </div>
+
+          <div class="about-text reveal reveal-delay-1">
+            <span class="section-tag">Know the City</span>
+            <h2 class="section-title" id="about-heading">
+              Gateway to the<br />Western Ghats
+            </h2>
+            <p>
+              Coimbatore, fondly called "Kovai" by locals, is Tamil Nadu's second
+              largest city — a dynamic metropolis nestled at the foothills of the
+              Nilgiri mountain range. With an elevation of 400–500 metres, the
+              city enjoys a pleasantly moderate climate year-round.
+            </p>
+            <p>
+              Known globally as India's textile capital, Coimbatore has evolved
+              into a hub of engineering, IT, and education without losing its
+              deep spiritual identity. The city is home to thousands of temples,
+              the globally renowned Isha Yoga Center, and the sacred Velliangiri
+              mountains.
+            </p>
+            <p>
+              With a population of over 2 million, Coimbatore blends the old and
+              new seamlessly — ancient Dravidian gopurams rise beside modern
+              tech parks, and century-old filter coffee shops stand next to
+              contemporary fine dining restaurants.
+            </p>
+
+            <div class="about-highlights">
+              <div class="highlight-item">
+                <span class="highlight-icon">🌡️</span>
+                <div>
+                  <h4>Pleasant Climate</h4>
+                  <p>18–35°C year-round, cooler than most South Indian cities.</p>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-icon">✈️</span>
+                <div>
+                  <h4>Well-Connected</h4>
+                  <p>International airport with flights to Dubai, Singapore & more.</p>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-icon">🏭</span>
+                <div>
+                  <h4>Textile Capital</h4>
+                  <p>40% of India's textile machinery is manufactured here.</p>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-icon">🎓</span>
+                <div>
+                  <h4>Education Hub</h4>
+                  <p>Home to 150+ engineering colleges and top medical institutes.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CITY FACTS GRID -->
+    <section class="section bg-surface2" aria-labelledby="facts-heading">
+      <div class="container">
+        <div class="section-header text-center reveal">
+          <span class="section-tag">Quick Facts</span>
+          <h2 class="section-title" id="facts-heading">Coimbatore at a Glance</h2>
+        </div>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;">
+
+          <div style="background:var(--color-surface);border-radius:var(--radius-md);padding:28px;text-align:center;box-shadow:var(--shadow-sm);"
+               class="reveal">
+            <div style="font-size:2.5rem;margin-bottom:8px;">🗓️</div>
+            <h3 style="font-family:var(--font-display);font-size:1.5rem;color:var(--color-primary);">Founded</h3>
+            <p style="color:var(--color-text-muted);font-size:0.9rem;">
+              Ancient settlement; modern city charter in 1866
+            </p>
+          </div>
+
+          <div style="background:var(--color-surface);border-radius:var(--radius-md);padding:28px;text-align:center;box-shadow:var(--shadow-sm);"
+               class="reveal reveal-delay-1">
+            <div style="font-size:2.5rem;margin-bottom:8px;">👥</div>
+            <h3 style="font-family:var(--font-display);font-size:1.5rem;color:var(--color-primary);">2.1M+</h3>
+            <p style="color:var(--color-text-muted);font-size:0.9rem;">Population (city proper)</p>
+          </div>
+
+          <div style="background:var(--color-surface);border-radius:var(--radius-md);padding:28px;text-align:center;box-shadow:var(--shadow-sm);"
+               class="reveal reveal-delay-2">
+            <div style="font-size:2.5rem;margin-bottom:8px;">🌍</div>
+            <h3 style="font-family:var(--font-display);font-size:1.5rem;color:var(--color-primary);">11°N</h3>
+            <p style="color:var(--color-text-muted);font-size:0.9rem;">Latitude — tropics near equator</p>
+          </div>
+
+          <div style="background:var(--color-surface);border-radius:var(--radius-md);padding:28px;text-align:center;box-shadow:var(--shadow-sm);"
+               class="reveal reveal-delay-3">
+            <div style="font-size:2.5rem;margin-bottom:8px;">🏔️</div>
+            <h3 style="font-family:var(--font-display);font-size:1.5rem;color:var(--color-primary);">425m</h3>
+            <p style="color:var(--color-text-muted);font-size:0.9rem;">Elevation above sea level</p>
+          </div>
+
+          <div style="background:var(--color-surface);border-radius:var(--radius-md);padding:28px;text-align:center;box-shadow:var(--shadow-sm);"
+               class="reveal">
+            <div style="font-size:2.5rem;margin-bottom:8px;">🗣️</div>
+            <h3 style="font-family:var(--font-display);font-size:1.5rem;color:var(--color-primary);">Tamil</h3>
+            <p style="color:var(--color-text-muted);font-size:0.9rem;">Primary language (English widely spoken)</p>
+          </div>
+
+          <div style="background:var(--color-surface);border-radius:var(--radius-md);padding:28px;text-align:center;box-shadow:var(--shadow-sm);"
+               class="reveal reveal-delay-1">
+            <div style="font-size:2.5rem;margin-bottom:8px;">💱</div>
+            <h3 style="font-family:var(--font-display);font-size:1.5rem;color:var(--color-primary);">INR</h3>
+            <p style="color:var(--color-text-muted);font-size:0.9rem;">Indian Rupee — affordable for travellers</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- TIMELINE -->
+    <section class="section" aria-labelledby="history-heading">
+      <div class="container">
+        <div class="section-header text-center reveal">
+          <span class="section-tag">History</span>
+          <h2 class="section-title" id="history-heading">A Storied Past</h2>
+          <p class="section-subtitle">From ancient Sangam poetry to modern industry, Coimbatore's history spans millennia.</p>
+        </div>
+
+        <div style="max-width:680px;margin:0 auto;">
+
+          <div style="display:flex;gap:24px;margin-bottom:32px;" class="reveal">
+            <div style="display:flex;flex-direction:column;align-items:center;">
+              <div style="width:48px;height:48px;background:var(--color-primary);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;flex-shrink:0;">🏺</div>
+              <div style="flex:1;width:2px;background:var(--color-border);margin-top:8px;"></div>
+            </div>
+            <div style="padding-bottom:24px;">
+              <h4 style="font-family:var(--font-display);">Ancient Era — Sangam Period</h4>
+              <p style="color:var(--color-text-muted);line-height:1.7;margin-top:6px;">
+                References to Coimbatore region appear in Sangam literature (3rd century BC–3rd century AD),
+                describing fertile Kongu Nadu as a land of rivers, forests, and thriving trade.
+              </p>
+            </div>
+          </div>
+
+          <div style="display:flex;gap:24px;margin-bottom:32px;" class="reveal reveal-delay-1">
+            <div style="display:flex;flex-direction:column;align-items:center;">
+              <div style="width:48px;height:48px;background:var(--color-secondary);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;flex-shrink:0;">👑</div>
+              <div style="flex:1;width:2px;background:var(--color-border);margin-top:8px;"></div>
+            </div>
+            <div style="padding-bottom:24px;">
+              <h4 style="font-family:var(--font-display);">Medieval — Kongu Cheras &amp; Cholas</h4>
+              <p style="color:var(--color-text-muted);line-height:1.7;margin-top:6px;">
+                The region flourished under successive Dravidian kingdoms. The Kongu Vellalar community
+                became its cultural backbone, building the ancient temples that still stand today.
+              </p>
+            </div>
+          </div>
+
+          <div style="display:flex;gap:24px;margin-bottom:32px;" class="reveal reveal-delay-2">
+            <div style="display:flex;flex-direction:column;align-items:center;">
+              <div style="width:48px;height:48px;background:var(--color-accent);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;flex-shrink:0;">🏭</div>
+              <div style="flex:1;width:2px;background:var(--color-border);margin-top:8px;"></div>
+            </div>
+            <div style="padding-bottom:24px;">
+              <h4 style="font-family:var(--font-display);">British Era — Textile Boom (1860s)</h4>
+              <p style="color:var(--color-text-muted);line-height:1.7;margin-top:6px;">
+                The arrival of the railway in 1861 transformed Coimbatore into a textile powerhouse.
+                Cotton mills proliferated, earning the city its "Manchester of South India" nickname.
+              </p>
+            </div>
+          </div>
+
+          <div style="display:flex;gap:24px;" class="reveal">
+            <div style="display:flex;flex-direction:column;align-items:center;">
+              <div style="width:48px;height:48px;background:var(--color-primary);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;flex-shrink:0;">🚀</div>
+            </div>
+            <div>
+              <h4 style="font-family:var(--font-display);">Modern Era — Tech &amp; Tourism</h4>
+              <p style="color:var(--color-text-muted);line-height:1.7;margin-top:6px;">
+                Today, Coimbatore is a Tier-2 city powerhouse — home to global IT firms, the Isha
+                Yoga Center (which draws 1M+ visitors annually), and an airport that connects it
+                to the Middle East, Singapore, and beyond.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section style="background:var(--color-primary);padding:80px 0;text-align:center;">
+      <div class="container reveal">
+        <h2 style="font-family:var(--font-display);font-size:2.2rem;color:#fff;margin-bottom:12px;">
+          Ready to Experience Kovai?
+        </h2>
+        <p style="color:rgba(255,255,255,0.8);max-width:460px;margin:0 auto 28px;">
+          Start planning your Coimbatore journey with our curated guides.
+        </p>
+        <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+          <a href="explore.html" class="btn" style="background:#fff;color:var(--color-primary);">Explore Places</a>
+          <a href="food.html"    class="btn btn-outline">Discover Food</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo" style="color:#fff;">
+            <span class="nav-logo-icon" aria-hidden="true">🌿</span>
+            Coimbatore<span style="color:var(--color-accent)">Explore</span>
+          </a>
+          <p>Your complete guide to the Manchester of South India.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook">📘</a>
+            <a href="#" aria-label="Instagram">📷</a>
+            <a href="#" aria-label="Twitter">🐦</a>
+            <a href="#" aria-label="YouTube">▶️</a>
+          </div>
+        </div>
+        <div class="footer-col"><h4>Quick Links</h4><ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="explore.html">Explore</a></li>
+          <li><a href="food.html">Food</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>Top Places</h4><ul>
+          <li><a href="explore.html">Marudamalai</a></li>
+          <li><a href="explore.html">Isha Adiyogi</a></li>
+          <li><a href="explore.html">Siruvani Falls</a></li>
+          <li><a href="explore.html">Black Thunder</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>Info</h4><ul>
+          <li><a href="#">Travel Tips</a></li>
+          <li><a href="#">Best Season</a></li>
+          <li><a href="#">How to Reach</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul></div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 CoimbatoreExplore. Crafted with ❤️ for wanderers.</p>
+        <p>Made for educational &amp; portfolio purposes.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scroll-top" aria-label="Scroll to top">↑</button>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
