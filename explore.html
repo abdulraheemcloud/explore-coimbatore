@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Explore Coimbatore's top tourist attractions — temples, waterfalls, nature spots, adventure parks, and theme parks." />
+  <meta name="keywords" content="Coimbatore explore, Marudamalai, Isha Adiyogi, Siruvani, Black Thunder, Kovai Kutralam" />
+  <title>Explore Places — Coimbatore Explore</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <script src="js/theme.js"></script>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <div id="scroll-progress" role="progressbar"></div>
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <span class="nav-logo-icon" aria-hidden="true">🌿</span>
+        Coimbatore<span style="color:var(--color-accent)">Explore</span>
+      </a>
+      <ul class="nav-links" id="nav-links" role="menubar">
+        <li role="none"><a href="index.html"   role="menuitem">Home</a></li>
+        <li role="none"><a href="explore.html" role="menuitem">Explore</a></li>
+        <li role="none"><a href="food.html"    role="menuitem">Food</a></li>
+        <li role="none"><a href="about.html"   role="menuitem">About</a></li>
+        <li role="none"><a href="contact.html" role="menuitem">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+          <span class="theme-toggle-knob" id="theme-knob" aria-hidden="true">☀️</span>
+        </button>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="explore-hero page-hero" aria-label="Explore hero">
+      <div class="container">
+        <span class="section-tag" style="color:rgba(255,255,255,0.7);">Tourist Attractions</span>
+        <h1 style="font-size:clamp(2.4rem,5vw,4rem);font-weight:900;margin-bottom:12px;">
+          Explore Coimbatore
+        </h1>
+        <p style="font-size:1.05rem;color:rgba(255,255,255,0.8);max-width:500px;margin:0 auto;">
+          Temples, waterfalls, nature trails, and adventure parks — filter by category
+          to find your perfect experience.
+        </p>
+      </div>
+    </section>
+
+    <!-- FILTER + CARDS -->
+    <section class="section" aria-labelledby="explore-heading">
+      <div class="container">
+
+        <div class="section-header text-center reveal">
+          <h2 class="section-title" id="explore-heading">All Destinations</h2>
+          <p class="section-subtitle">Click a category to filter the list.</p>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="filter-bar reveal" role="toolbar" aria-label="Filter destinations by category">
+          <button class="filter-btn active" data-filter="all"       aria-pressed="true">All Places</button>
+          <button class="filter-btn"        data-filter="temple"    aria-pressed="false">🛕 Temples</button>
+          <button class="filter-btn"        data-filter="nature"    aria-pressed="false">🌿 Nature</button>
+          <button class="filter-btn"        data-filter="adventure" aria-pressed="false">🧗 Adventure</button>
+          <button class="filter-btn"        data-filter="waterfall" aria-pressed="false">💧 Waterfalls</button>
+          <button class="filter-btn"        data-filter="themepark" aria-pressed="false">🎡 Theme Parks</button>
+        </div>
+
+        <!-- Cards Grid -->
+        <div class="explore-grid" id="explore-grid">
+
+          <!-- 1. Marudamalai Temple -->
+          <article class="explore-card reveal"
+                   data-category="temple"
+                   data-lightbox="assets/images/marudamalai.jpg"
+                   data-caption="Marudamalai Temple — Hilltop Shrine of Lord Murugan"
+                   tabindex="0"
+                   role="button"
+                   aria-label="View Marudamalai Temple">
+            <div class="explore-card-img">
+              <img src="assets/images/marudamalai.jpg"
+                   alt="Marudamalai Murugan Temple on a forested hill"
+                   loading="lazy" />
+              <span class="explore-card-cat cat-temple">Temple</span>
+            </div>
+            <div class="explore-card-body">
+              <h3>Marudamalai Temple</h3>
+              <p>Perched atop a hillock at 300m elevation, this ancient temple
+                 dedicated to Lord Murugan is surrounded by dense forest and
+                 visited by thousands of pilgrims daily.</p>
+              <div class="timing">
+                <span aria-hidden="true">🕐</span>
+                <span>6:00 AM – 12:30 PM &amp; 4:00 PM – 9:00 PM</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 2. Isha Adiyogi -->
+          <article class="explore-card reveal reveal-delay-1"
+                   data-category="temple"
+                   data-lightbox="assets/images/adiyogi.jpg"
+                   data-caption="Isha Adiyogi — World's Largest Bust Sculpture"
+                   tabindex="0"
+                   role="button"
+                   aria-label="View Isha Adiyogi">
+            <div class="explore-card-img">
+              <img src="assets/images/adiyogi.jpg"
+                   alt="Isha Adiyogi 112-foot shiva face at Isha Yoga Center"
+                   loading="lazy" />
+              <span class="explore-card-cat cat-temple">Temple</span>
+            </div>
+            <div class="explore-card-body">
+              <h3>Isha Adiyogi</h3>
+              <p>The world-record 112-ft Adiyogi bust at the Isha Yoga Center
+                 stands against the Velliangiri mountains as a symbol of yoga's
+                 ancient heritage. Evening light shows are spectacular.</p>
+              <div class="timing">
+                <span aria-hidden="true">🕐</span>
+                <span>6:00 AM – 8:00 PM Daily</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 3. Siruvani Waterfalls -->
+          <article class="explore-card reveal reveal-delay-2"
+                   data-category="waterfall"
+                   data-lightbox="assets/images/siruvani.jpg"
+                   data-caption="Siruvani Waterfalls — Second Sweetest Water on Earth"
+                   tabindex="0"
+                   role="button"
+                   aria-label="View Siruvani Waterfalls">
+            <div class="explore-card-img">
+              <img src="assets/images/siruvani.jpg"
+                   alt="Siruvani Waterfalls cascading over rocks in deep forest"
+                   loading="lazy" />
+              <span class="explore-card-cat cat-waterfall">Waterfall</span>
+            </div>
+            <div class="explore-card-body">
+              <h3>Siruvani Waterfalls</h3>
+              <p>Flowing through the Anamalai Tiger Reserve, Siruvani is
+                 celebrated for having the world's second sweetest natural water.
+                 The trek through dense Shola forest makes the journey magical.</p>
+              <div class="timing">
+                <span aria-hidden="true">🕐</span>
+                <span>9:00 AM – 5:00 PM (Oct – Jun best)</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 4. Kovai Kutralam -->
+          <article class="explore-card reveal"
+                   data-category="waterfall"
+                   data-lightbox="assets/images/kovai-kutralam.jpg"
+                   data-caption="Kovai Kutralam — The Cascades of Coimbatore"
+                   tabindex="0"
+                   role="button"
+                   aria-label="View Kovai Kutralam">
+            <div class="explore-card-img">
+              <img src="assets/images/kovai-kutralam.jpg"
+                   alt="Kovai Kutralam waterfall with visitors bathing"
+                   loading="lazy" />
+              <span class="explore-card-cat cat-waterfall">Waterfall</span>
+            </div>
+            <div class="explore-card-body">
+              <h3>Kovai Kutralam</h3>
+              <p>Often called the "Niagara of Coimbatore", these twin falls
+                 near Mettupalayam are a popular weekend escape with cool mist
+                 and jungle surroundings in the foothills of the Nilgiris.</p>
+              <div class="timing">
+                <span aria-hidden="true">🕐</span>
+                <span>Open Daily 7:00 AM – 6:00 PM</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 5. Black Thunder -->
+          <article class="explore-card reveal reveal-delay-1"
+                   data-category="themepark"
+                   data-lightbox="assets/images/black-thunder.jpg"
+                   data-caption="Black Thunder — South India's Biggest Water Theme Park"
+                   tabindex="0"
+                   role="button"
+                   aria-label="View Black Thunder">
+            <div class="explore-card-img">
+              <img src="assets/images/black-thunder.jpg"
+                   alt="Black Thunder water theme park rides and slides"
+                   loading="lazy" />
+              <span class="explore-card-cat cat-themepark">Theme Park</span>
+            </div>
+            <div class="explore-card-body">
+              <h3>Black Thunder</h3>
+              <p>South India's largest water theme park near Mettupalayam,
+                 featuring 45+ rides, wave pools, and adrenaline slides — the
+                 ultimate family and adventure destination close to Coimbatore.</p>
+              <div class="timing">
+                <span aria-hidden="true">🕐</span>
+                <span>9:30 AM – 6:00 PM (Closed Tuesdays)</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 6. Velliangiri Mountains -->
+          <article class="explore-card reveal reveal-delay-2"
+                   data-category="adventure"
+                   data-lightbox="assets/images/velliangiri.jpg"
+                   data-caption="Velliangiri Mountains — The Himalaya of the South"
+                   tabindex="0"
+                   role="button"
+                   aria-label="View Velliangiri Mountains">
+            <div class="explore-card-img">
+              <img src="assets/images/velliangiri.jpg"
+                   alt="Velliangiri Mountains misty peak trekking trail"
+                   loading="lazy" />
+              <span class="explore-card-cat cat-adventure">Adventure</span>
+            </div>
+            <div class="explore-card-body">
+              <h3>Velliangiri Mountains</h3>
+              <p>A challenging 7-hill trek revered as the Himalaya of the South,
+                 culminating at a Shiva lingam shrine above the clouds. Best
+                 attempted in the Shivaratri season (Jan–Mar).</p>
+              <div class="timing">
+                <span aria-hidden="true">🕐</span>
+                <span>Trekking Season: Jan – Mar</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 7. Anamalai Tiger Reserve -->
+          <article class="explore-card reveal"
+                   data-category="nature"
+                   data-lightbox="assets/images/anamalai.jpg"
+                   data-caption="Anamalai Tiger Reserve — Where Tigers Roam Free"
+                   tabindex="0"
+                   role="button"
+                   aria-label="View Anamalai Tiger Reserve">
+            <div class="explore-card-img">
+              <img src="assets/images/anamalai.jpg"
+                   alt="Anamalai Tiger Reserve forest with wild elephants"
+                   loading="lazy" />
+              <span class="explore-card-cat cat-nature">Nature</span>
+            </div>
+            <div class="explore-card-body">
+              <h3>Anamalai Tiger Reserve</h3>
+              <p>One of India's most biodiverse wildlife sanctuaries, home to
+                 tigers, leopards, elephants, and rare bird species across
+                 1,479 sq km of Western Ghats wilderness.</p>
+              <div class="timing">
+                <span aria-hidden="true">🕐</span>
+                <span>6:00 AM – 6:00 PM (Forest dept permission required)</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 8. Perur Pateeswarar Temple -->
+          <article class="explore-card reveal reveal-delay-1"
+                   data-category="temple"
+                   data-lightbox="assets/images/perur.jpg"
+                   data-caption="Perur Pateeswarar Temple — 2000-Year-Old Dravidian Marvel"
+                   tabindex="0"
+                   role="button"
+                   aria-label="View Perur Pateeswarar Temple">
+            <div class="explore-card-img">
+              <img src="assets/images/perur.jpg"
+                   alt="Perur Pateeswarar Temple gopuram with intricate stone carvings"
+                   loading="lazy" />
+              <span class="explore-card-cat cat-temple">Temple</span>
+            </div>
+            <div class="explore-card-body">
+              <h3>Perur Pateeswarar Temple</h3>
+              <p>A masterpiece of Dravidian architecture over 2,000 years old,
+                 dedicated to Lord Shiva. The ornate gopuram carvings and Natarajar
+                 shrine make it an architectural gem of Tamil Nadu.</p>
+              <div class="timing">
+                <span aria-hidden="true">🕐</span>
+                <span>6:00 AM – 12:00 PM &amp; 4:30 PM – 9:00 PM</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 9. Dhyanalinga -->
+          <article class="explore-card reveal reveal-delay-2"
+                   data-category="temple"
+                   data-lightbox="assets/images/dhyanalinga.jpg"
+                   data-caption="Dhyanalinga — A Space of Pure Meditation"
+                   tabindex="0"
+                   role="button"
+                   aria-label="View Dhyanalinga">
+            <div class="explore-card-img">
+              <img src="assets/images/dhyanalinga.jpg"
+                   alt="Dhyanalinga meditation dome at Isha Yoga Center Coimbatore"
+                   loading="lazy" />
+              <span class="explore-card-cat cat-temple">Temple</span>
+            </div>
+            <div class="explore-card-body">
+              <h3>Dhyanalinga</h3>
+              <p>The only linga consecrated in its full vibrational splendour,
+                 the Dhyanalinga is a powerful meditative space open to all
+                 regardless of religion or belief.</p>
+              <div class="timing">
+                <span aria-hidden="true">🕐</span>
+                <span>6:00 AM – 8:00 PM Daily</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 10. Monkey Falls -->
+          <article class="explore-card reveal"
+                   data-category="nature"
+                   data-lightbox="assets/images/monkey-falls.jpg"
+                   data-caption="Monkey Falls — A Refreshing Forest Stream"
+                   tabindex="0"
+                   role="button"
+                   aria-label="View Monkey Falls">
+            <div class="explore-card-img">
+              <img src="assets/images/monkey-falls.jpg"
+                   alt="Monkey Falls small waterfall with visitors playing"
+                   loading="lazy" />
+              <span class="explore-card-cat cat-nature">Nature</span>
+            </div>
+            <div class="explore-card-body">
+              <h3>Monkey Falls</h3>
+              <p>A gentle cascade on the way to Valparai, this picnic-perfect
+                 spot is named for the troops of monkeys that inhabit the
+                 surrounding forest. Popular with families and school groups.</p>
+              <div class="timing">
+                <span aria-hidden="true">🕐</span>
+                <span>Open Daily 8:00 AM – 5:00 PM</span>
+              </div>
+            </div>
+          </article>
+
+        </div><!-- /.explore-grid -->
+
+        <!-- No results message -->
+        <div id="no-results" style="display:none;text-align:center;padding:48px;color:var(--color-text-muted);">
+          <div style="font-size:3rem;margin-bottom:12px;">🔍</div>
+          <h3 style="font-family:var(--font-display);">No places found</h3>
+          <p>Try a different category filter.</p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo" style="color:#fff;">
+            <span class="nav-logo-icon" aria-hidden="true">🌿</span>
+            Coimbatore<span style="color:var(--color-accent)">Explore</span>
+          </a>
+          <p>Your complete guide to the Manchester of South India.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook">📘</a>
+            <a href="#" aria-label="Instagram">📷</a>
+            <a href="#" aria-label="Twitter">🐦</a>
+            <a href="#" aria-label="YouTube">▶️</a>
+          </div>
+        </div>
+        <div class="footer-col"><h4>Quick Links</h4><ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="explore.html">Explore</a></li>
+          <li><a href="food.html">Food</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>Categories</h4><ul>
+          <li><a href="explore.html">Temples</a></li>
+          <li><a href="explore.html">Nature</a></li>
+          <li><a href="explore.html">Adventure</a></li>
+          <li><a href="explore.html">Waterfalls</a></li>
+          <li><a href="explore.html">Theme Parks</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>Info</h4><ul>
+          <li><a href="#">Travel Tips</a></li>
+          <li><a href="#">Best Season</a></li>
+          <li><a href="#">How to Reach</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul></div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 CoimbatoreExplore. Crafted with ❤️ for wanderers.</p>
+        <p>Made for educational &amp; portfolio purposes.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scroll-top" aria-label="Scroll to top">↑</button>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image preview">
+    <div class="lightbox-inner">
+      <button class="lightbox-close" aria-label="Close">✕</button>
+      <img class="lightbox-img" src="" alt="Enlarged destination photo" />
+      <p class="lightbox-caption"></p>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/filter.js"></script>
+</body>
+</html>
